@@ -7,7 +7,7 @@ class Gemini:
         text = text.replace('•', '*')
         return textwrap.indent(text, '> ')
 
-    GOOGLE_API_KEY = "AIzaSyBpC_J5Dsl_gwqGBdC6nYRgT9Vk1pmKm_E"
+    GOOGLE_API_KEY = ""
     genai.configure(api_key=GOOGLE_API_KEY,)
 
     def get_response(prompt: str):
