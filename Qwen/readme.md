@@ -115,6 +115,8 @@ Observações
 Certifique-se de não compartilhar sua chave de API publicamente.
 A precisão das respostas depende da capacidade do modelo Qwen.
 Para problemas mais complexos, ajuste o parâmetro max_tokens no arquivo qwen.py para permitir respostas mais longas.
+
+
 Licença
 Este projeto está sob a licença MIT.
 
