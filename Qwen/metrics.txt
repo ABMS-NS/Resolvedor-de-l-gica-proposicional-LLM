@@ -1,0 +1,870 @@
+Prompt: ### Contexto
+Você é um tutor especializado em lógica proposicional e dedução natural. Explique cada passo de forma clara e seja conciso.
+### Objetivo
+Resolva o problema usando:
+- Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+- Regras de Equivalência: Dupla Negação, De Morgan, etc.
+Use Chain of Thought (CoT) para decompor o problema.
+### Sentenças
+3 sentenças fornecidas:
+ P: Hoje é feriado.
+ Q: Eu vou ao parque.
+ R: Eu me divirto.
+
+### Problema
+1-P → (Q → R)
+2-P
+3-¬R
+
+Conclusão desejada: Prove que Eu não vou ao parque é verdadeiro (¬Q).
+### Saída Esperada
+Forneça explicações passo a passo e a conclusão final. Use o formato:
+- Passo 1: [Explicação]
+- Passo 2: [Explicação]
+- Conclusão: [Resultado]
+Se não for possível provar, explique por quê.
+### Delimitadores
+Use '===' para separar seções.
+### Exemplo de Saída
+===
+- Passo 1: Suponha A v C. Assuma ¬(B v C).
+- Passo 2: Pela Lei de De Morgan, ¬(B v C) ≡ ¬B ∧ ¬C.
+- Passo 3: De ¬B ∧ ¬C, conclua ¬C e ¬B.
+- Passo 4: De A v C e ¬C, conclua A.
+- Passo 5: De A → B e A, conclua B.
+- Passo 6: Rejeite ¬(B v C) e conclua B v C.
+- Conclusão: Prove que (A v C) → (B v C).
+===
+Response: ===
+- Passo 1: Começamos com as premissas fornecidas:
+  1. \( P \rightarrow (Q \rightarrow R) \)
+  2. \( P \)
+  3. \( \neg R \)
+
+- Passo 2: A partir da Premissa 2 (\( P \)) e da Premissa 1 (\( P \rightarrow (Q \rightarrow R) \)), aplicamos **Modus Ponens** para concluir que \( Q \rightarrow R \).
+  - Justificativa: Se \( P \) é verdadeiro e \( P \rightarrow (Q \rightarrow R) \) também é verdadeiro, então \( Q \rightarrow R \) deve ser verdadeiro.
+
+- Passo 3: Agora temos \( Q \rightarrow R \) e a Premissa 3 (\( \neg R \)). Aplicamos **Modus Tollens** para concluir \( \neg Q \).
+  - Justificativa: Se \( Q \rightarrow R \) é verdadeiro e \( \neg R \) é verdadeiro, então \( Q \) não pode ser verdadeiro. Logo, \( \neg Q \).
+
+- Conclusão: Prova concluída. \( \neg Q \) (Eu não vou ao parque) foi derivado das premissas.
+===
+
+### Resumo dos Passos
+1. Usamos **Modus Ponens** para derivar \( Q \rightarrow R \) a partir de \( P \) e \( P \rightarrow (Q \rightarrow R) \).
+2. Usamos **Modus Tollens** para derivar \( \neg Q \) a partir de \( Q \rightarrow R \) e \( \neg R \).
+
+### Conclusão Final
+\( \neg Q \) é verdadeiro. Portanto, "Eu não vou ao parque" é uma conclusão válida.
+Response Time: 13.32s
+Tokens Used: 992
+CPU Usage: 0.2%
+Memory Usage: 0.50MB
+Network Latency: 657.80ms
+Server Processing Time: 12665.51ms
+Correctness: Correta
+Prompt: ### Contexto
+Você é um tutor especializado em lógica proposicional e dedução natural.Explique de forma concisa, sem detalhes desnecessários.
+### Objetivo
+Resolva o problema usando:
+- Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+- Regras de Equivalência: Dupla Negação, De Morgan, etc.
+Use Chain of Thought (CoT) para decompor o problema.
+### Sentenças
+3 sentenças fornecidas:
+ P: O candidato é experiente
+ Q: O candidato é qualificado
+ R: O candidato tem boa comunicação
+### Problema
+1-P ∨ Q
+2-R
+3-Q
+Conclusão desejada: Prove que O candidato é Qualificado ou tem boa comunicação (Q ∨ R).
+### Saída Esperada
+Forneça explicações passo a passo e a conclusão final. Use o formato:
+- Passo 1: [Explicação]
+- Passo 2: [Explicação]
+- Conclusão: [Resultado]
+Se não for possível provar, explique por quê.
+### Delimitadores
+Use '===' para separar seções.
+### Exemplo de Saída
+===
+- Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+- Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+- Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+- Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+- Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+- Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+- Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+===
+Response: ===
+- Passo 1: Das premissas fornecidas, temos:
+  1. P ∨ Q (O candidato é experiente ou qualificado)
+  2. R (O candidato tem boa comunicação)
+  3. Q (O candidato é qualificado)
+
+- Passo 2: A conclusão desejada é Q ∨ R (O candidato é qualificado ou tem boa comunicação).
+
+- Passo 3: Da premissa 3 (Q), sabemos que "O candidato é qualificado" já é verdadeiro.
+
+- Passo 4: Se Q é verdadeiro, então a disjunção Q ∨ R também será verdadeira, independentemente do valor de R. Isso ocorre porque em uma disjunção, basta um dos lados ser verdadeiro para que toda a expressão seja verdadeira.
+
+- Conclusão: Prova concluída. Com base na regra da **Introdução da Disjunção**, a partir de Q, podemos derivar Q ∨ R.
+  
+**Resultado final:** Q ∨ R foi provado com sucesso.
+===
+Response Time: 8.85s
+Tokens Used: 942
+CPU Usage: 0.3%
+Memory Usage: 0.62MB
+Network Latency: 667.80ms
+Server Processing Time: 8179.60ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            2 sentenças fornecidas:
+             P: Você participou da reunião.
+
+ R: Você apresentou o projeto.
+
+ Q: Você obteve aprovação.
+            ### Problema
+            1-(P ∧ R) → Q
+2-¬Q
+Conclusão desejada: Prove que Você não participou da reunião e não apresentou o projeto ¬(P ∧ R).
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1**: Começamos com as premissas fornecidas:
+  1. $(P \land R) \rightarrow Q$ (Premissa 1)
+  2. $\neg Q$ (Premissa 2)
+
+- **Passo 2**: Da Premissa 1, sabemos que se $P \land R$ for verdadeiro, então $Q$ também deve ser verdadeiro. Formalmente, isso é uma implicação condicional.
+
+- **Passo 3**: Aplicamos a regra de inferência **Modus Tollens** usando as premissas 1 e 2. O Modus Tollens afirma que se temos uma implicação $A \rightarrow B$ e sabemos que $\neg B$, podemos concluir $\neg A$. Aqui, substituímos $A$ por $P \land R$ e $B$ por $Q$:
+  - Da Premissa 1: $(P \land R) \rightarrow Q$
+  - Da Premissa 2: $\neg Q$
+  - Conclusão via Modus Tollens: $\neg(P \land R)$
+
+- **Passo 4**: Agora, simplificamos $\neg(P \land R)$ utilizando a **Lei de De Morgan**. A Lei de De Morgan diz que $\neg(A \land B)$ é equivalente a $\neg A \lor \neg B$. Assim:
+  - $\neg(P \land R)$ é equivalente a $\neg P \lor \neg R$
+
+- **Passo 5**: Observe que $\neg P \lor \neg R$ pode ser interpretado como "Você não participou da reunião ou você não apresentou o projeto". Isso é consistente com a conclusão desejada, $\neg(P \land R)$, que significa "Você não participou da reunião e não apresentou o projeto".
+
+- **Conclusão**: Com base nos passos acima, provamos que $\neg(P \land R)$, ou seja, "Você não participou da reunião e não apresentou o projeto".
+===
+
+**Resposta Final**:  
+- **Conclusão**: $\boxed{\neg(P \land R)}$
+Response Time: 15.31s
+Tokens Used: 1105
+CPU Usage: 0.2%
+Memory Usage: 1.00MB
+Network Latency: 665.06ms
+Server Processing Time: 14649.58ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            3 sentenças fornecidas:
+            A: O aluno estudou
+
+B: O aluno obteve uma boa nota
+
+C: O aluno foi aprovado
+
+            ### Problema
+            1-(A → B)
+2-(B → C)
+3-¬¬A
+
+Conclusão desejada: Prove que se o aluno estudou então o aluno foi aprovado (A → C).
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1**: Começamos com as premissas fornecidas:
+  1. $ A \rightarrow B $ (Se o aluno estudou, então obteve uma boa nota.)
+  2. $ B \rightarrow C $ (Se o aluno obteve uma boa nota, então foi aprovado.)
+  3. $ \neg\neg A $ (O aluno estudou, pela regra de Dupla Negação, isso equivale a $ A $.)
+
+- **Passo 2**: Nosso objetivo é provar que $ A \rightarrow C $ (Se o aluno estudou, então foi aprovado). Para isso, usaremos prova condicional: assumiremos $ A $ como hipótese e tentaremos derivar $ C $.
+
+- **Passo 3**: Assumimos $ A $ como hipótese para prova condicional.
+  
+- **Passo 4**: Da premissa $ A \rightarrow B $ (Passo 1) e da nossa hipótese $ A $ (Passo 3), aplicamos **Modus Ponens** para concluir $ B $. Agora temos $ B $.
+
+- **Passo 5**: Da premissa $ B \rightarrow C $ (Passo 1) e do resultado $ B $ (Passo 4), aplicamos novamente **Modus Ponens** para concluir $ C $. Agora temos $ C $.
+
+- **Passo 6**: Como partimos da hipótese $ A $ e conseguimos derivar $ C $, podemos concluir por **Prova Condicional** que $ A \rightarrow C $.
+
+- **Conclusão**: Prova concluída. Com base nas premissas fornecidas e nas regras de inferência aplicadas, provamos que $ A \rightarrow C $.
+
+===
+**Resultado Final**: $ A \rightarrow C $ (Se o aluno estudou, então foi aprovado.)
+Response Time: 13.71s
+Tokens Used: 1057
+CPU Usage: 0.2%
+Memory Usage: 0.62MB
+Network Latency: 678.19ms
+Server Processing Time: 13034.30ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            10 sentenças fornecidas:
+             A: O funcionário é assíduo
+
+ B: O funcionário demonstra colaboração
+
+ C: O funcionário possui competência técnica
+
+ D: O funcionário é promovido
+
+ E: O funcionário participou do treinamento
+
+ F: O funcionário teve bom desempenho
+
+ G: O funcionário se destaca na equipe
+
+ H: O funcionário alcança reconhecimento
+
+ I: O funcionário demonstra iniciativa
+
+ J: O funcionário é considerado para novos desafios
+
+            ### Problema
+            1-((A ∧ B) ∧ C) → D
+2-(D ∧ F) → G
+3-E → F
+4-F → B
+5-B → C
+6-G → H
+7-I → J
+8-(A ∧ F) → H
+9-A
+10-F
+Conclusão desejada: Prove que o Funcionário alcança reconhecimento (H).
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1:** Da premissa 9, temos que $ A $ é verdadeiro.  
+  - Justificativa: Premissa dada.
+
+- **Passo 2:** Da premissa 10, temos que $ F $ é verdadeiro.  
+  - Justificativa: Premissa dada.
+
+- **Passo 3:** Da premissa 4 ($ F \rightarrow B $) e do Passo 2 ($ F $), aplicamos o Modus Ponens para concluir que $ B $ é verdadeiro.  
+  - Justificativa: Regra de inferência (Modus Ponens).
+
+- **Passo 4:** Da premissa 5 ($ B \rightarrow C $) e do Passo 3 ($ B $), aplicamos o Modus Ponens para concluir que $ C $ é verdadeiro.  
+  - Justificativa: Regra de inferência (Modus Ponens).
+
+- **Passo 5:** Agora, com $ A $ (Passo 1), $ B $ (Passo 3) e $ C $ (Passo 4), podemos formar a conjunção $ (A \land B) \land C $.  
+  - Justificativa: Regra de introdução da conjunção.
+
+- **Passo 6:** Da premissa 1 ($ ((A \land B) \land C) \rightarrow D $) e do Passo 5 ($ (A \land B) \land C $), aplicamos o Modus Ponens para concluir que $ D $ é verdadeiro.  
+  - Justificativa: Regra de inferência (Modus Ponens).
+
+- **Passo 7:** Da premissa 2 ($ (D \land F) \rightarrow G $), combinamos $ D $ (Passo 6) e $ F $ (Passo 2) para formar a conjunção $ D \land F $.  
+  - Justificativa: Regra de introdução da conjunção.
+
+- **Passo 8:** Com $ D \land F $ (Passo 7) e a premissa 2 ($ (D \land F) \rightarrow G $), aplicamos o Modus Ponens para concluir que $ G $ é verdadeiro.  
+  - Just
+Response Time: 16.36s
+Tokens Used: 1261
+CPU Usage: 0.3%
+Memory Usage: 0.62MB
+Network Latency: 659.33ms
+Server Processing Time: 15701.94ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            2 sentenças fornecidas:
+            P: Você é membro ativo.
+
+Q: Você possui um cupom de desconto.
+
+R: Você alcançou o gasto mínimo exigido.
+
+S: Você recebe o desconto.
+            ### Problema
+            1-P ∨ (Q ∧ R)
+2-(P ∨ Q) → S
+Conclusão desejada: Prove Vocẽ é membro ativo ou você recebe o desconto (P ∨ S).
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1**: Reescreva as premissas fornecidas.
+    - Premissa 1: $ P \lor (Q \land R) $
+    - Premissa 2: $ (P \lor Q) \to S $
+    - Objetivo: Provar $ P \lor S $.
+
+- **Passo 2**: Considere a primeira premissa $ P \lor (Q \land R) $. Por definição da disjunção, sabemos que ou $ P $ é verdadeiro, ou $ Q \land R $ é verdadeiro. Trataremos esses dois casos separadamente.
+
+- **Passo 3**: Caso 1: Suponha que $ P $ seja verdadeiro.
+    - Se $ P $ for verdadeiro, então diretamente temos $ P \lor S $, pois uma disjunção é verdadeira se pelo menos um de seus termos for verdadeiro.
+    - Neste caso, já provamos $ P \lor S $.
+
+- **Passo 4**: Caso 2: Suponha que $ Q \land R $ seja verdadeiro.
+    - Se $ Q \land R $ for verdadeiro, então tanto $ Q $ quanto $ R $ são verdadeiros (pela regra de Eliminação da Conjunção).
+    - Agora considere a segunda premissa $ (P \lor Q) \to S $. Substituímos $ Q $ por verdadeiro (pois assumimos $ Q \land R $ verdadeiro), o que torna $ P \lor Q $ verdadeiro (uma vez que $ Q $ já é verdadeiro).
+    - Com $ P \lor Q $ verdadeiro e pela premissa $ (P \lor Q) \to S $, aplicamos Modus Ponens para concluir que $ S $ é verdadeiro.
+    - Se $ S $ é verdadeiro, então $ P \lor S $ também é verdadeiro, pois uma disjunção é verdadeira se qualquer um dos seus termos for verdadeiro.
+
+- **Passo 5**: Combine os dois casos.
+    - No primeiro caso ($ P $ verdadeiro), provamos $ P \lor S $.
+    - No segundo caso ($ Q \land R $ verdadeiro), também provamos $ P \lor S $.
+    - Como
+Response Time: 16.31s
+Tokens Used: 1149
+CPU Usage: 0.1%
+Memory Usage: 0.75MB
+Network Latency: 704.35ms
+Server Processing Time: 15610.18ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            3 sentenças fornecidas:
+             P: O professor disse que a prova seria difícil.
+
+ Q: O aluno foi aprovado.
+
+ R: O aluno estudou bastante.
+            ### Problema
+            1-(P → ¬Q) ∨ R
+2-(P → ¬Q) → ¬¬Q
+3-R → ¬¬Q
+Conclusão desejada: Prove que ¬¬Q é verdadeiro e o aluno foi aprovado.
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1**: Analisamos a primeira sentença: $(P \rightarrow \neg Q) \lor R$.  
+  Essa é uma disjunção, o que significa que pelo menos uma das proposições $P \rightarrow \neg Q$ ou $R$ deve ser verdadeira. Vamos explorar essa possibilidade mais tarde.
+
+- **Passo 2**: Analisamos a segunda sentença: $(P \rightarrow \neg Q) \rightarrow \neg\neg Q$.  
+  Isso implica que se $P \rightarrow \neg Q$ for verdadeiro, então $\neg\neg Q$ também será verdadeiro. Usaremos essa implicação em etapas posteriores.
+
+- **Passo 3**: Analisamos a terceira sentença: $R \rightarrow \neg\neg Q$.  
+  Isso significa que se $R$ (o aluno estudou bastante) for verdadeiro, então $\neg\neg Q$ (o aluno foi aprovado) também será verdadeiro.
+
+- **Passo 4**: A conclusão desejada é provar que $\neg\neg Q$ (o aluno foi aprovado) é verdadeira. Para isso, precisamos encontrar uma forma de derivar $\neg\neg Q$ a partir das premissas fornecidas.
+
+- **Passo 5**: Retornamos à primeira sentença: $(P \rightarrow \neg Q) \lor R$.  
+  Podemos aplicar a regra da disjunção para assumir dois casos possíveis:
+  - Caso 1: $P \rightarrow \neg Q$ é verdadeiro.
+  - Caso 2: $R$ é verdadeiro.
+
+- **Passo 6**: Consideramos o **Caso 1**: Suponha que $P \rightarrow \neg Q$ seja verdadeiro.  
+  Da segunda sentença, sabemos que $(P \rightarrow \neg Q) \rightarrow \neg\neg Q$.  
+  Aplicando **Modus Ponens** com $P \rightarrow \neg Q$ e $(P \rightarrow \neg Q) \rightarrow \neg\neg Q$, concluímos que $\neg\neg Q$ é verdadeiro.
+
+- **Passo 7**: Consideramos o **Caso 2**: Suponha que $R$ seja verdadeiro.  
+  Da
+Response Time: 16.15s
+Tokens Used: 1148
+CPU Usage: 0.2%
+Memory Usage: 0.50MB
+Network Latency: 677.59ms
+Server Processing Time: 15470.10ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            3 sentenças fornecidas:
+             P: O aluno estudou para a prova.
+
+ Q: O aluno entendeu a matéria.
+
+ R: O aluno passou na prova.
+
+ S: O aluno recebeu elogios pelo desempenho.
+            ### Problema
+            1-P → Q
+2-Q → R
+3-P
+Conclusão desejada: Prove que O aluno passou na prova ou o aluno recebeu elogios pelo desempenho (R ∨ S).
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1**: Da premissa 3, temos que $ P $ é verdadeira. (Premissa fornecida)
+
+- **Passo 2**: Da premissa 1 ($ P \rightarrow Q $) e do fato de que $ P $ é verdadeira (Passo 1), aplicamos a regra de inferência **Modus Ponens** para concluir que $ Q $ é verdadeira.
+
+- **Passo 3**: Da premissa 2 ($ Q \rightarrow R $) e do fato de que $ Q $ é verdadeira (Passo 2), aplicamos novamente a regra de inferência **Modus Ponens** para concluir que $ R $ é verdadeira.
+
+- **Passo 4**: Agora queremos provar que $ R \lor S $. Como já sabemos que $ R $ é verdadeira (Passo 3), podemos usar a regra de equivalência **Adição**, que nos permite concluir $ R \lor S $ a partir de $ R $. Isso ocorre porque se uma das disjunções ($ R $) é verdadeira, toda a disjunção $ R \lor S $ será verdadeira independentemente do valor lógico de $ S $.
+
+- **Conclusão**: Com base no raciocínio acima, provamos que $ R \lor S $ é verdadeiro.
+===
+
+Portanto, o resultado final é:
+$$
+\boxed{R \lor S}
+$$
+Response Time: 10.97s
+Tokens Used: 973
+CPU Usage: 0.4%
+Memory Usage: 0.50MB
+Network Latency: 704.79ms
+Server Processing Time: 10263.14ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            4 sentenças fornecidas:
+            M: Mítico
+I: Imortal
+A: Mamífero
+C: Chifrudo
+G: Mágico
+            ### Problema
+            1-M → I
+2-¬M → (¬I ∧ A)
+3-(I ∨ A) → C
+4-C → G
+Conclusão desejada: Prove que Mágico é Verdadeiro (G).
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1**: Começamos com a premissa 1: $ M \rightarrow I $. Isso significa que, se algo é Mítico ($M$), então ele é Imortal ($I$).
+
+- **Passo 2**: Consideramos a premissa 2: $ \neg M \rightarrow (\neg I \land A) $. Isso implica que, se algo não é Mítico ($\neg M$), então ele não é Imortal ($\neg I$) e é Mamífero ($A$).
+
+- **Passo 3**: Da premissa 3: $ (I \lor A) \rightarrow C $, sabemos que, se algo é Imortal ou Mamífero ($I \lor A$), então ele é Chifrudo ($C$).
+
+- **Passo 4**: Da premissa 4: $ C \rightarrow G $, concluímos que, se algo é Chifrudo ($C$), então ele é Mágico ($G$).
+
+- **Passo 5**: Nosso objetivo é provar que $ G $ (Mágico) é verdadeiro. Para isso, devemos explorar as implicações das premissas.
+
+- **Passo 6**: Vamos considerar dois casos principais: $ M $ (Mítico) e $ \neg M $ (não Mítico).
+
+---
+
+### **Caso 1: Suponha $ M $**
+- Se $ M $ é verdadeiro, pela premissa 1 ($ M \rightarrow I $), aplicamos **Modus Ponens** para concluir que $ I $ (Imortal) também é verdadeiro.
+- Agora, consideramos a premissa 3 ($ (I \lor A) \rightarrow C $). Como $ I $ já é verdadeiro, $ I \lor A $ também é verdadeiro (porque uma disjunção é verdadeira se qualquer um de seus termos for verdadeiro).
+- Com $ I \lor A $ verdadeiro, aplicamos **Modus Ponens** na premissa 3 para concluir que $ C $ (Chifrudo) é verdadeiro.
+- Finalmente, pela premissa 4 ($ C \rightarrow G $), aplicamos novamente **Modus Ponens** para concluir que $ G $ (Mágico) é verdadeiro.
+
+---
+
+### **Caso 2: Suponha $ \neg M $**
+- Se $ \neg M $ é verdadeiro, pela premissa 2 ($ \neg M \rightarrow (\neg I \land A) $), aplicamos **Modus Ponens** para concluir que $ \neg I \land A $ é verdadeiro.
+- Da conjunção $ \neg I \land A $, aplicamos **Eliminação da Conjunção** para obter $ A $ (Mamífero) como verdadeiro.
+- Agora, consideramos novamente a premissa 3 ($ (I \lor A) \rightarrow C $). Como $ A $ é verdadeiro, $ I \lor A $ também é verdadeiro (porque uma disjunção é verdadeira se qualquer um de seus termos for verdadeiro).
+- Com $ I \lor A $ verdadeiro,
+Response Time: 22.57s
+Tokens Used: 1343
+CPU Usage: 0.1%
+Memory Usage: -0.75MB
+Network Latency: 1467.19ms
+Server Processing Time: 21100.10ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            1 sentenças fornecidas:
+            
+A: A tarefa foi iniciada.
+
+B: A tarefa foi concluída.
+
+C: Houve uma alteração no procedimento.
+            ### Problema
+            1-A → B
+Conclusão desejada: Prove que Se a tarefa foi iniciada ou houve uma alteração, então ou a tarefa foi concluída ou houve uma alteração no procedimento (A ∨ C) → (B ∨ C).
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1**: Suponha $ A \lor C $. Nosso objetivo é provar que $ B \lor C $ a partir dessa suposição. Se conseguirmos, teremos provado $ (A \lor C) \to (B \lor C) $ por prova condicional.
+  
+- **Passo 2**: Suponha $ \neg(B \lor C) $ como hipótese para Redução ao Absurdo. Pela Lei de De Morgan, $ \neg(B \lor C) $ é equivalente a $ \neg B \land \neg C $.
+
+- **Passo 3**: Da conjunção $ \neg B \land \neg C $, aplicamos a Regra de Eliminação da Conjunção para obter $ \neg B $ e $ \neg C $ separadamente.
+
+- **Passo 4**: Agora consideramos nossa suposição inicial $ A \lor C $. Pela Regra do Silogismo Disjuntivo, se $ A \lor C $ for verdadeiro e $ \neg C $ também for verdadeiro, então devemos concluir $ A $. Isso ocorre porque $ C $ foi eliminado pela negação.
+
+- **Passo 5**: Com $ A $ agora estabelecido e dado o fato de que $ A \to B $ é uma premissa fornecida, aplicamos Modus Ponens para concluir $ B $.
+
+- **Passo 6**: Temos agora $ B $, mas isso contradiz nossa hipótese anterior $ \neg B $ (obtida no Passo 3). Essa contradição nos permite rejeitar a hipótese $ \neg(B \lor C) $ e concluir que $ B \lor C $ deve ser verdadeiro por Redução ao Absurdo.
+
+- **Conclusão**: Por prova condicional, partindo da hipótese $ A \lor C $ e concluindo $ B \lor C $, provamos que $ (A \lor C) \to (B \lor C) $.
+===
+Response Time: 14.84s
+Tokens Used: 1105
+CPU Usage: 0.3%
+Memory Usage: 0.62MB
+Network Latency: 702.49ms
+Server Processing Time: 14140.80ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            6 sentenças fornecidas:
+            A: O projeto foi iniciado.
+
+ B: O plano de marketing foi elaborado.
+
+ C: O orçamento foi aprovado.
+
+ D: O plano de marketing foi executado.
+
+ E: O orçamento foi revisado.
+
+ F: O projeto foi bem-sucedido.
+            ### Problema
+             1-A → (B ∨ C)
+
+ 2-B → D
+
+ 3-C → E
+
+ 4-(D ∨ E) → F
+
+ 5-¬F
+
+ 6-A
+Conclusão desejada: Prove que: Nem o plano de marketing foi elaborado nem o orçamento foi aprovado     (¬B ∧ ¬C). 
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1:** Começamos com as premissas fornecidas:
+  1. $ A \rightarrow (B \lor C) $
+  2. $ B \rightarrow D $
+  3. $ C \rightarrow E $
+  4. $ (D \lor E) \rightarrow F $
+  5. $ \neg F $
+  6. $ A $
+
+  Nosso objetivo é provar $ \neg B \land \neg C $.
+
+- **Passo 2:** Da premissa 6 ($ A $) e da premissa 1 ($ A \rightarrow (B \lor C) $), aplicamos **Modus Ponens** para concluir:
+  $$
+  B \lor C
+  $$
+
+- **Passo 3:** Suponha $ B $. Usando a premissa 2 ($ B \rightarrow D $), aplicamos **Modus Ponens** para obter:
+  $$
+  D
+  $$
+
+- **Passo 4:** Agora, consideremos $ D $. Combinando $ D $ com a premissa 4 ($ (D \lor E) \rightarrow F $), observamos que $ D \lor E $ é verdadeiro porque $ D $ já é verdadeiro. Aplicamos **Modus Ponens** novamente para concluir:
+  $$
+  F
+  $$
+
+- **Passo 5:** No entanto, isso contradiz a premissa 5 ($ \neg F $). Portanto, nossa suposição de que $ B $ é verdadeira deve ser falsa. Concluímos:
+  $$
+  \neg B
+  $$
+
+- **Passo 6:** Agora, retorne à conclusão do Passo 2 ($ B \lor C $). Como provamos $ \neg B $, podemos aplicar o **Silogismo Disjuntivo** para concluir:
+  $$
+  C
+  $$
+
+- **Passo 7:** Suponha agora que $ C $ é verdadeiro. Usando a premissa 3 ($ C \rightarrow E $), aplicamos **Modus Ponens** para obter:
+  $$
+  E
+  $$
+
+- **Passo 8:** Combinando $ E $ com a premissa 4 ($ (D \lor E) \rightarrow F $), observamos que $ D \lor E $ é verdadeiro porque $ E $ já é verdadeiro. Aplicamos **Modus Ponens** novamente para concluir:
+  $$
+  F
+  $$
+
+- **Passo 9:** Isso também contradiz a premissa 5 ($ \neg F $). Portanto, nossa suposição de que $ C $ é verdadeira deve ser falsa. Concluímos:
+  $$
+  \neg C
+  $$
+
+- **Passo 10:** Finalmente, combinamos $ \neg B $ e $ \neg C $ usando a regra de **Introdução da Conjunção** para concluir:
+  $$
+  \neg B \land \neg C
+  $$
+
+- **Conclusão:** Prova concluída! O resultado final é:
+  $$
+  \boxed{\neg B \land \neg C
+Response Time: 22.22s
+Tokens Used: 1406
+CPU Usage: 0.1%
+Memory Usage: 0.62MB
+Network Latency: 678.86ms
+Server Processing Time: 21541.43ms
+Correctness: Correta
+--------------------------------------------------
+Prompt: ### Contexto
+            Você é um tutor especializado em lógica proposicional. Explique de forma clara e concisa.
+            ### Objetivo
+            Resolva o problema usando:
+            - Regras de Inferência: Modus Ponens, Modus Tollens, etc.
+            - Regras de Equivalência: Dupla Negação, De Morgan, etc.
+            Use Chain of Thought (CoT) para decompor o problema.
+            ### Sentenças
+            3 sentenças fornecidas:
+            p: O motor experimental da nave é ativado.
+
+ q: A nave acelera até a velocidade de dobra.
+
+ r: O sistema de camuflagem (stealth) da nave é ativado.
+
+ s: O alarme de emergência é disparado."
+
+ t: A missão de infiltração é bem-sucedida.
+            ### Problema
+            
+1-(p → q) → r
+2-(r ∨ s) → ¬t
+3-t
+Conclusão desejada: Prove que A nave não acelera até a velocidade de dobra ¬q.
+            ### Saída Esperada
+            Forneça explicações passo a passo e a conclusão final no formato:
+            - Passo 1: [Explicação]
+            - Passo 2: [Explicação]
+            - Conclusão: [Resultado]
+            Se não for possível provar, explique por quê.
+            ### Delimitadores
+            Use '===' para separar seções.
+            ### Exemplo de Saída
+            ===
+            - Passo 1: Suponha A ∨ C. Assuma ¬(B ∨ C) como hipótese para Redução ao Absurdo.
+            - Passo 2: Pela Lei de De Morgan, ¬(B ∨ C) é equivalente a ¬B ∧ ¬C.
+            - Passo 3: De ¬B ∧ ¬C, concluímos ¬C e ¬B por Eliminação da Conjunção.
+            - Passo 4: De A ∨ C e ¬C, concluímos A por Silogismo Disjuntivo.
+            - Passo 5: De A → B e A, aplicamos Modus Ponens para concluir B.
+            - Passo 6: B contradiz ¬B, então rejeitamos ¬(B ∨ C) e concluímos B ∨ C por Redução ao Absurdo.
+            - Conclusão: Por prova condicional, a partir da hipótese A ∨ C e da conclusão B ∨ C, provamos que (A ∨ C) → (B ∨ C).
+            ===
+Response: ===
+- **Passo 1**: A partir da premissa 3, temos que $ t $ é verdadeiro.
+  - Justificativa: Esta é uma premissa fornecida diretamente.
+
+- **Passo 2**: Considerando a premissa 2, $(r \lor s) \to \neg t$, e sabendo que $ t $ é verdadeiro (Passo 1), podemos concluir que $ r \lor s $ deve ser falso.
+  - Justificativa: Se $ t $ é verdadeiro, então $\neg t$ é falso. Pela regra do Modus Tollens aplicada à implicação $(r \lor s) \to \neg t$, concluímos que $ r \lor s $ deve ser falso para evitar uma contradição.
+
+- **Passo 3**: Como $ r \lor s $ é falso, ambos $ r $ e $ s $ devem ser falsos.
+  - Justificativa: De acordo com a definição da disjunção lógica ($ r \lor s $), se a disjunção inteira for falsa, ambas as proposições componentes ($ r $ e $ s $) precisam ser falsas.
+
+- **Passo 4**: Agora consideramos a premissa 1, $(p \to q) \to r$. Sabemos que $ r $ é falso (Passo 3). Portanto, $(p \to q)$ também deve ser falso.
+  - Justificativa: Pela regra do Modus Tollens aplicada à implicação $(p \to q) \to r$, se $ r $ é falso, então $(p \to q)$ precisa ser falso.
+
+- **Passo 5**: Para que $(p \to q)$ seja falso, $ p $ precisa ser verdadeiro e $ q $ precisa ser falso.
+  - Justificativa: Uma implicação lógica $ A \to B $ é falsa apenas quando $ A $ é verdadeiro e $ B $ é falso. Aplicando isso aqui, $ p $ deve ser verdadeiro e $ q $ deve ser falso para tornar $(p \to q)$ falso.
+
+- **Conclusão**: Prova-se que $ \neg q $ (A nave não acelera até a velocidade de dobra).
+  - Justificativa: Segue diretamente do Passo 5.
+
+===
+**Resposta Final**: A conclusão desejada, $ \neg q $, foi provada com base nas premissas fornecidas.  
+$\boxed{\neg q}$
+Response Time: 17.81s
+Tokens Used: 1245
+CPU Usage: 0.2%
+Memory Usage: 0.62MB
+Network Latency: 559.30ms
+Server Processing Time: 17253.04ms
+Correctness: Correta
+--------------------------------------------------
