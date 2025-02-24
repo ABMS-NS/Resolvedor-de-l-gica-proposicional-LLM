@@ -71,3 +71,8 @@ Se A é verdadeira (Chuva), então B também é verdadeira (Rua Molhada). Se B �
 ## Observações
 - Caso ocorra um erro na API, o código exibirá a mensagem de erro.
 - A temperatura do modelo está definida como `0.7` para permitir um equilíbrio entre criatividade e previsibilidade.
+
+## Licença
+
+Este projeto é distribuído sob a licença MIT. Sinta-se à vontade para usá-lo e modificá-lo conforme necessário.
+
