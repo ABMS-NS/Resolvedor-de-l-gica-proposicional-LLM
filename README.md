@@ -1,4 +1,4 @@
-# Logical Solver for DeepSeek, Qwen e Gemini
+# Logical Solver for DeepSeek, Gemini e Qwen
 
 Este projeto implementa solucionadores lógicos para três modelos de IA: DeepSeek, Qwen e Gemini. Cada um desses modelos recebe um problema baseado em sentenças proposicionais fornecidas pelo usuário e retorna uma solução baseada na lógica proposicional.
 
