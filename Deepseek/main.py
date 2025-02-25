@@ -13,7 +13,7 @@ def main():
             entries = []
             while True:
                 entry = input()
-                if entry.strip().upper()[0] == "F":
+                if entry.strip().upper() == "FIM":
                     print('-=' * 40)
                     break
                 entries.append(entry)
