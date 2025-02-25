@@ -1,9 +1,9 @@
-# Logical Problem Solutions Compilation
+# Problem-solving in logic for a virtual assistant
 
 ## Problemas Fáceis
 
 
-### Problema 1
+## Problema 1
 Vamos resolver o problema de lógica passo a passo, utilizando as regras da lógica proposicional. Temos as seguintes premissas:
 
 1. \( P \rightarrow (Q \rightarrow R) \)
@@ -59,7 +59,7 @@ A partir das premissas dadas, concluímos que \( \neg Q \) é verdadeiro. Isso s
 3. \( Q \rightarrow R \) (Modus Pon
 
 
-### Problema 2
+## Problema 2
 Vamos resolver o problema de lógica proposicional passo a passo.
 
 ### Dadas as sentenças:
@@ -98,7 +98,7 @@ Determinar a conclusão lógica a partir dessas premissas.
 As conclusões são que o candidato é qualificado (**Q**) e tem boa comunicação (**R**). Não há necessidade de determinar se o candidato é experiente (**P**), pois as conclusões já são suficientes com base nas premissas fornecidas.
 
 
-### Problema 3
+## Problema 3
 Para resolver o problema de lógica proposicional apresentado, vamos seguir os passos abaixo:
 
 **Premissas:**
@@ -130,7 +130,7 @@ Com base nas premissas fornecidas, podemos concluir que:
 Portanto, a resposta ao problema é que \( Q \) é falso e que pelo menos uma das proposições \( P \) ou \( R \) é falsa. Não é possível determinar qual das duas proposições \( P \) ou \( R \) é falsa apenas com as informações fornecidas.
 
 
-### Problema 4
+## Problema 4
 Para resolver esse problema de lógica proposicional, vamos analisar as sentenças e as implicações dadas.
 
 ### Sentenças:
@@ -171,7 +171,7 @@ Assim, a resposta final é que o aluno foi aprovado.
 ## Problemas Médios
 
 
-### Problema 1
+## Problema 1
 Vamos resolver o problema passo a passo, utilizando as regras da lógica proposicional. Primeiro, vamos listar as premissas e o que queremos provar.
 
 ### Premissas:
@@ -203,7 +203,7 @@ Vamos resolver o problema passo a passo, utilizando as regras da lógica proposi
 A partir das premissas dadas, concluímos que \( H
 
 
-### Problema 2
+## Problema 2
 Vamos resolver o problema de lógica passo a passo, utilizando as regras da lógica proposicional. As sentenças e as proposições são as seguintes:
 
 **Sentenças:**
@@ -250,7 +250,7 @@ Agora, vamos conectar as duas proposições para entender o problema completo.
 Observe
 
 
-### Problema 3
+## Problema 3
 Para resolver o problema de lógica proposicional, vamos analisar as três sentenças dadas e as proposições associadas:
 
 **Sentenças:**
@@ -287,7 +287,7 @@ Agora, vamos tentar determinar a validade dessas proposições.
    - Se \(R\) for verdadeiro, então toda a proposição é verdadeira, independentemente do valor de \(P \rightarrow \neg Q\).
 
 
-### Problema 4
+## Problema 4
 Vamos resolver o problema de lógica passo a passo, utilizando as regras da lógica proposicional.
 
 ### **Premissas:**
@@ -327,7 +327,7 @@ Portanto, a resposta final é: **"O aluno passou na prova."**
 ## Problemas Difíceis
 
 
-### Problema 1
+## Problema 1
 Para resolver esse problema de lógica proposicional, vamos analisar as sentenças e as implicações dadas passo a passo. Vamos usar as seguintes abreviações:
 
 - **M**: Mítico
@@ -370,7 +370,7 @@ Para resolver esse problema de lógica proposicional, vamos analisar as sentenç
 ### Resumo das anál
 
 
-### Problema 2
+## Problema 2
 Para resolver o problema lógico apresentado, vamos analisar as sentenças e a implicação dada.
 
 ### Sentenças:
@@ -406,7 +406,7 @@ Portanto, a resposta ao problema lógico é:
 A implicação **A → B** estabelece uma relação condicional entre as duas sentenças. Se **A** é verdadeiro, então **B** também deve ser verdadeiro. Se **A** é falso, **B** pode ser verdadeiro ou falso, mas a implicação não nos fornece informações adicionais sobre **B** nesse caso.
 
 
-### Problema 3
+## Problema 3
 Para resolver o problema de lógica proposicional apresentado, vamos analisar as sentenças e as implicações passo a passo. Vamos usar as letras A, B, C, D, E, e F para representar as sentenças dadas:
 
 - **A:** O projeto foi iniciado.
@@ -447,7 +447,7 @@ No entanto, pela regra 5, **¬F** (O projeto **não** foi bem-sucedido), **F** �
 Portanto,
 
 
-### Problema 4
+## Problema 4
 Vamos resolver o problema de lógica proposicional passo a passo, utilizando as sentenças e as regras fornecidas.
 
 ### Sentenças:
