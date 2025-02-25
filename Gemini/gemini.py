@@ -47,12 +47,11 @@ class Gemini:
         else:
             print("Não foi possível gerar uma resposta.")
 
-    def avaliador(resposta: str, ):
+    def avaliador(resposta: str):
         response = Gemini.get_response(f"Por meio das regras de lógica proposicional avalie se a resolução a seguir está correta ou não \n\n{resposta}"
                                        f"Se a resolução estiver correta, retorne apenas 1, se não estiver, retorne apenas 0.")
         
-        if response:
-            print(Gemini.to_markdown_terminal(response))
-        else:
-            print("Não foi possível gerar uma resposta.")
+        if response == "1": return True
+        elif response == "0": return False
+        else: print("Não foi possível gerar uma avaliação satisfatível.")
         
