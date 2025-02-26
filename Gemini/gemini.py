@@ -51,7 +51,7 @@ class Gemini:
         response = Gemini.get_response(f"Por meio das regras de lógica proposicional avalie se a resolução a seguir está correta ou não \n\n{resposta}"
                                        f"Se a resolução estiver correta, retorne apenas 1, se não estiver, retorne apenas 0.")
         
-        # Conversor de string para inteiro
+        #conversor de string para inteiro
         if response == "1": return 1
         elif response == "0": return 0
         else: print("Não foi possível gerar uma avaliação satisfatível.")
