@@ -2,7 +2,7 @@ import textwrap
 import google.generativeai as genai
 
 class Gemini:
-    #só uma função pra o texto aparecer certinho no terminal
+    #só uma função pra o texto para aparecer de maneira bonita no terminal
     def to_markdown_terminal(text):
         text = text.replace('•', '*')
         return textwrap.indent(text, '> ')
@@ -49,7 +49,7 @@ class Gemini:
 
     def avaliador(resposta: str):
         response = Gemini.get_response(f"Por meio das regras de lógica proposicional avalie se a resolução a seguir está correta ou não \n\n{resposta}"
-                                       f"Se a resolução estiver correta, retorne apenas 1, se não estiver, retorne apenas 0.")
+            f"Se a resolução estiver correta, retorne apenas 1, se não estiver, retorne apenas 0.")
         
         #conversor de string para inteiro
         if response == "1": return 1
