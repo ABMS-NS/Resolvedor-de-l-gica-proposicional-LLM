@@ -47,12 +47,13 @@ class Gemini:
         else:
             print("Não foi possível gerar uma resposta.")
 
-    def avaliador(resposta: str):
-        response = Gemini.get_response(f"Por meio das regras de lógica proposicional avalie se a resolução a seguir está correta ou não \n\n{resposta}"
-            f"Se a resolução estiver correta, retorne apenas 1, se não estiver, retorne apenas 0.")
+    def avaliador(resposta1: str, resposta2: str):
+        response = Gemini.get_response(f"Por meio das regras de lógica proposicional avalie qual das respostas a seguir é a melhor"
+            f"\n\nResposta 1: {resposta1}\n\nResposta 2: {resposta2}\n"
+            f"Se a resposta 1 for melhor, digite apenas '1'. Se a resposta 2 for melhor, digite apenas '2'.")
         
         #conversor de string para inteiro
         if response == "1": return 1
-        elif response == "0": return 0
+        elif response == "2": return 2
         else: print("Não foi possível gerar uma avaliação satisfatível.")
         
