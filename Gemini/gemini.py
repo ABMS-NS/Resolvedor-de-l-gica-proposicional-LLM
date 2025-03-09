@@ -52,9 +52,10 @@ class Gemini:
             f"\n\nResposta 1: {resposta1}\n\nResposta 2: {resposta2}\n"
             f"Se a resposta 1 for melhor, digite apenas '1'. Se a resposta 2 for melhor, digite apenas '2'.")
         
+        print(f"GEMINI {response}") #debug
         #conversor de string para inteiro
-        if response == "1": return 1
-        elif response == "2": return 2
+        if response == "1" or "'1'": return 1
+        elif response == "2" or "'2'": return 2
         else: print("Não foi possível gerar uma avaliação satisfatível. (GEMINI)")
         
     def resolvedor(n_sentencas: str, sentencas: str, problema: str):
