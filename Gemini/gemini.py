@@ -74,3 +74,13 @@ class Gemini:
             return(Gemini.to_markdown_terminal(response))
         else:
             return("Não foi possível gerar uma resposta. (GEMINI)")
+        
+    def avaliadorbinario(resposta: str):
+        response = Gemini.get_response(f"Por meio das regras de lógica proposicional avalie a resposta que irei lhe entregar e diga apenas se concorda ou discorda da resolução. \n\n"
+                                       f"Resposta em questão: {resposta}.")
+
+
+        if response:
+            return(Gemini.to_markdown_terminal(response))
+        else:
+            return("Não foi possível gerar uma resposta. (GEMINI)")           
