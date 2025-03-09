@@ -50,8 +50,10 @@ class Gemini:
     def avaliador(resposta1: str, resposta2: str):
         response = Gemini.get_response(f"Por meio das regras de lógica proposicional avalie qual das respostas a seguir é a melhor"
             f"\n\nResposta 1: {resposta1}\n\nResposta 2: {resposta2}\n"
-            f"Se a resposta 1 for melhor, digite apenas '1'. Se a resposta 2 for melhor, digite apenas '2'.")
+            f"Se a resposta 1 for melhor, digite apenas e unicamente '1'. Se a resposta 2 for melhor, digite apenas e unicamente '2'.")
         
+
+        response = int(response)
         print(f"GEMINI {response}") #debug
         #conversor de string para inteiro
         if response == "1" or "'1'": return 1
