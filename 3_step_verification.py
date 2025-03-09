@@ -25,7 +25,7 @@ votes.append(Gemini.avaliador(answers[1],answers[2]))
 votes.append(Qwen.avaliador(answers[0],answers[2]))
 votes.append(DeepSeek.avaliador(answers[0],answers[1]))
 
-if (votes[1] == 0 and answers [2] == 0):
+if (votes[1] == 0 and votes [2] == 0):
     print(answers[0])
 elif (votes[0] == 1 and votes [2] == 1):
     print(answers[1])
