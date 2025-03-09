@@ -32,7 +32,7 @@ class Gemini:
         else:
             print("Não foi possível gerar uma resposta.")
 
-    def resolvedor(n_sentencas: str, sentencas: str, problema: str):
+    def resolvedorOld(n_sentencas: str, sentencas: str, problema: str):
         response = Gemini.get_response(f"Resolva esse problema de lógica apresentado a seguir segundo as regras de lógica proposicional:\n\n"
             f"Número de sentenças que serão apresentadas para você: {n_sentencas}.\n"
             f"Agora, serão mostradas a entrada das sentenças no seguinte formato: 'A: sentença' sendo 'A' a letra que irá "
@@ -57,3 +57,17 @@ class Gemini:
         elif response == "2": return 2
         else: print("Não foi possível gerar uma avaliação satisfatível.")
         
+    def resolvedor(n_sentencas: str, sentencas: str, problema: str):
+        response = Gemini.get_response(f"Resolva esse problema de lógica apresentado a seguir segundo as regras de lógica proposicional:\n\n"
+            f"Número de sentenças que serão apresentadas para você: {n_sentencas}.\n"
+            f"Agora, serão mostradas a entrada das sentenças no seguinte formato: 'A: sentença' sendo 'A' a letra que irá "
+            f"representar tal sentença no problema e 'sentença' sendo a sentença em linguagem natural.\n"
+            f"Sentenças postas pelo usuário: {sentencas}.\n"
+            f"Agora, irei te mostrar o problema lógico que quero que resolva a partir do que mostrei: {problema}.\n"
+            f"A partir disso quero que me diga a reposta do problema me dizendo como chegou até ela."
+            )
+            
+        if response:
+            return(Gemini.to_markdown_terminal(response))
+        else:
+            print("Não foi possível gerar uma resposta.")

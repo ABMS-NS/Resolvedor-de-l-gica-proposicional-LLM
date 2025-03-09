@@ -8,6 +8,6 @@ sentencas = sys.stdin.read().strip()
 print("Digite o problema utilizando quebra de linha para separar cada sentença e o número da mesma na frente (pressione Ctrl+D para finalizar): \nEx:\n1-A → B\n2-B → C\n3-A\n")
 problema = sys.stdin.read().strip()
 
-Gemini.resolvedor(n_sentencas,sentencas,problema)
+Gemini.resolvedorOld(n_sentencas,sentencas,problema)
 
 
