@@ -2,23 +2,26 @@ import requests
 
 class DeepSeek:
 
+    #Key coletada do OpenRouter para uso do DeepSeek V3 (free)
     API_KEY = "KEY"
     API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
     @staticmethod
-    def get_response(prompt: str):
+    def get_response(prompt: str): #Uso de uma requisição HTTP para acessar a API do DeepSeek.
         headers = {
             "Authorization": f"Bearer {DeepSeek.API_KEY}",
             "Content-Type": "application/json"
         }
 
+        #Descrição de como a mensagem do DeepSeek aparecerá para o usuário.
         data = {
             "model": "deepseek/deepseek-chat:free",  # Modelo gratuito do DeepSeek dentro do OpenRouter
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0.7,
-            "max_tokens": 500
+            "max_tokens": 1000
         }
 
+        #Avisar ao usuário caso a API dê erro.
         try:
             response = requests.post(DeepSeek.API_URL, json = data, headers = headers)
 
@@ -30,6 +33,7 @@ class DeepSeek:
         except Exception as e:
             return f"Erro ao conectar à API: {e}"
 
+    #Resolvedor. Prompt enviado ao DeepSeek para que ele resolva o problema de lógica proposicional
     @staticmethod
     def resolvedor(n_sentencas: str, sentencas: str, problema: str):
         prompt = (
@@ -48,3 +52,21 @@ class DeepSeek:
             print(response)
         else:
             print("Não foi possível gerar uma resposta.")
+
+    #Avaliador. Comparativo entre as LLMs. Prompt enviado ao DeepSeek se referindo às respostas do Gemini e do Qwen
+    def avaliador(resposta1: str, resposta2: str):
+        prompt = (
+            f"Por meio das regras de lógica proposicional avalie qual das respostas a seguir é a melhor\n"
+            f"Resposta 1: '{resposta1}'\nResposta 2: '{resposta2}'\n"
+            f"Se a resposta 1 for melhor, digite apenas '1'. Se a resposta 2 for melhor, digite apenas '2'."
+        )
+
+        response = DeepSeek.get_response(prompt)
+
+        #Conversor de string para inteiro
+        if response == "1":
+            return 1
+        elif response == "2":
+            return 2
+        else:
+            print("Não foi possível gerar uma avaliação satisfatível.")
