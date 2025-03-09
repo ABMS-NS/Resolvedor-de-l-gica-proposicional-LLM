@@ -55,7 +55,7 @@ class Gemini:
         #conversor de string para inteiro
         if response == "1": return 1
         elif response == "2": return 2
-        else: print("Não foi possível gerar uma avaliação satisfatível.")
+        else: print("Não foi possível gerar uma avaliação satisfatível. (GEMINI)")
         
     def resolvedor(n_sentencas: str, sentencas: str, problema: str):
         response = Gemini.get_response(f"Resolva esse problema de lógica apresentado a seguir segundo as regras de lógica proposicional:\n\n"
