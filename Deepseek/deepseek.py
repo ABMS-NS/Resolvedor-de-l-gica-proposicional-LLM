@@ -90,7 +90,7 @@ class DeepSeek:
             print("Não foi possível gerar uma resposta.")
 
      def avaliadorbinario(resposta: str):
-        response = DeepSeek.get_response(f"Por meio das regras de lógica proposicional avalie de maneira concisa a resposta que irei lhe entregar e diga somente se você concorda(acha a resolução correta) ou discord(acha resolução incorreta). \n\n"
+        response = DeepSeek.get_response(f"Por meio das regras de lógica proposicional avalie a resposta que irei lhe entregar e diga se você concorda (acha a resolução correta) ou discorda (acha resolução incorreta), e somente fale se concorda ou discorda (nada além disso). \n\n"
                                        f"Resposta em questão: {resposta}.")
 
         if response:
