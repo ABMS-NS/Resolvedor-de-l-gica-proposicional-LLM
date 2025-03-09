@@ -33,7 +33,7 @@ class DeepSeek:
         except Exception as e:
             return f"Erro ao conectar à API: {e}"
 
-    #Resolvedor. Prompt enviado ao DeepSeek para que ele resolva o problema de lógica proposicional
+    #Resolvedor antigo. Prompt enviado ao main.py do deepseek.py (somente) para que ele resolva o problema de lógica proposicional
     @staticmethod
     def resolvedorOld(n_sentencas: str, sentencas: str, problema: str):
         prompt = (
@@ -69,9 +69,9 @@ class DeepSeek:
         elif response == "1":
             return 1
         else:
-            print("Não foi possível gerar uma avaliação satisfatível.")
+            print("Não foi possível gerar uma avaliação satisfatível. (DeepSeek)")
 
-    def resolvedor(n_sentencas: str, sentencas: str, problema: str):
+    def resolvedor(n_sentencas: str, sentencas: str, problema: str): #Resolvedor novo. Prompt enviado ao 3_step_verification.py para que ele resolva o problema de lógica proposicional
         prompt = (
             f"Resolva esse problema de lógica apresentado a seguir segundo as regras de lógica proposicional:\n\n"
             f"Número de sentenças que serão apresentadas para você: {n_sentencas}.\n"
