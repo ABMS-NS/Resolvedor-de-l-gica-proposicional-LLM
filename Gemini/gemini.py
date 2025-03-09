@@ -70,4 +70,4 @@ class Gemini:
         if response:
             return(Gemini.to_markdown_terminal(response))
         else:
-            return("Não foi possível gerar uma resposta.")
+            return("Não foi possível gerar uma resposta. (GEMINI)")
