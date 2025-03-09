@@ -32,7 +32,7 @@ class Gemini:
         else:
             print("Não foi possível gerar uma resposta.")
 
-    def resolvedorOld(n_sentencas: str, sentencas: str, problema: str):
+    def resolvedorOld(n_sentencas: str, sentencas: str, problema: str): #função antiga de resolvedor
         response = Gemini.get_response(f"Resolva esse problema de lógica apresentado a seguir segundo as regras de lógica proposicional:\n\n"
             f"Número de sentenças que serão apresentadas para você: {n_sentencas}.\n"
             f"Agora, serão mostradas a entrada das sentenças no seguinte formato: 'A: sentença' sendo 'A' a letra que irá "
