@@ -57,8 +57,8 @@ class DeepSeek:
     def avaliador(resposta1: str, resposta2: str):
         prompt = (
             f"Por meio das regras de lógica proposicional avalie qual das respostas a seguir é a melhor\n"
-            f"Resposta 1: '{resposta1}'\nResposta 2: '{resposta2}'\n"
-            f"Se a resposta 1 for melhor, digite apenas '1'. Se a resposta 2 for melhor, digite apenas '2'."
+            f"Resposta 0: '{resposta1}'\nResposta 1: '{resposta2}'\n"
+            f"Se a resposta 0 for melhor, digite apenas '0'. Se a resposta 1 for melhor, digite apenas '1'."
         )
 
         response = DeepSeek.get_response(prompt)
