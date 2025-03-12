@@ -137,4 +137,25 @@ class Qwen:
         if response:
             return(Qwen.to_markdown_terminal(response))
         else:
-            return("Não foi possível gerar uma resposta. (Qwen)")           
+            return("Não foi possível gerar uma resposta. (Qwen)")      
+
+    #função dedicada a resolver problemas de lógica proposicional em 
+    @staticmethod
+    def resolver(problem: str): 
+        response = Qwen.get_response(f" Solve the following logic proof problem and provide a detailed, step-by-step explanation (step-by-step proof construction) using the natural deduction method through the use of logical inference rules like Modus Ponens, Modus Tollens, Hypothetical Sylogism, as well as rules for replacement (like De Morgan’s Law, Double Negation). The explanation should be tailored for undergraduate students in introductory logic courses, meaning you should define any technical terms and explain each step clearly (step-by-step proof construction). Problem:  {problem}")
+        
+        if response:
+            return(Qwen.to_markdown_terminal(response))
+        else:
+            return("Não foi possível gerar uma resposta. (Qwen)")          
+
+
+    #função dedicada a avaliar problemas de lógica proposicional em inglês
+    @staticmethod
+    def appraiser(answer: str):
+        response = Qwen.get_response(f"Evaluate the following logical proof resolution and provide a detailed explanation, evaluating the method of natural deduction through the use of logical inference rules such as Modus Ponens, Modus Tollens, Hypothetical Syllogism, as well as rules for substitution (such as De Morgan's Law, Double Negation). The evaluating should be adapted for undergraduate students in introductory logic courses, which means you should evaluate any technical terms and explain each step clearly if it is correct or not. Problem: {answer}")
+
+        if response:
+            return(Qwen.to_markdown_terminal(response))
+        else:
+            return("Não foi possível gerar uma resposta. (Qwen)")         
